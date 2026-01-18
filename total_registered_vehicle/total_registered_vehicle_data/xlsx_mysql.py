@@ -34,7 +34,10 @@ long_df["reg_count"] = pd.to_numeric(
     long_df["reg_count"].astype(str).str.replace(",", "", regex=False),
     errors="coerce"
 )
+
 long_df = long_df[long_df["reg_type"] != "계"] # 합계 칼럼 없애기
+long_df = long_df[long_df["vehicle_type"] != "총계"] # 총계도 있었네
+long_df = long_df[long_df["district"] != "계"] # 시군구에도 계가 있네
 
 #  확인용
 print(long_df.head())
@@ -49,13 +52,13 @@ print("duplicate rows by key:", dup)
 
 from sqlalchemy import create_engine
 
-# 본인이 쓰는 계정 정보
-user = "project1"
-pw = "qwe123"
+# 본인이 쓰는 계정 정보 (꼭 바꿔서 입력해 주세요.!!) --------------------------------------------------------------------
+user = "ohgiraffers"
+pw = "ohgiraffers"
 host = "localhost"      
 port = 3306
-db = "car_data"
-
+db = "vehicledb"
+# --------------------------------------------------------------------------------------------------------------------
 engine = create_engine(
     f"mysql+pymysql://{user}:{pw}@{host}:{port}/{db}?charset=utf8mb4"
 )
