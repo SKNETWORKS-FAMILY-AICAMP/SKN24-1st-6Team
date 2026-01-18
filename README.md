@@ -1,43 +1,119 @@
 🚘 CARPORT (카포트)
+
+
 한번에 요즘 자동차 등록, 판매 수를 볼수있는 플랫폼
 
+
+
+
+
+<br>
 👥 팀 소개
+
+
 팀명: 구갱 
+
+
 팀원들이 90년대생인 데이터로 90년도생인 gang 
+
+
 김유진 @shortcut-2
+
+
 김정현 @Jeich-16
+
+
 정재훈 @JeaHoon-J
+
+
 권민제 @min3802
+
+
 박정은 @brainkat
 
+
+
+
+
+<br>
 📋 프로젝트 개요
+
+
 CARPORT는 2025년 최신 데이터를 바탕으로, 자동차 구매를 고민하거나 시장 동향이 궁금한 분들을 위해 전국 자동차 등록 현황과 인기 모델 정보를 한눈에 보여주는 플랫폼입니다.
+
+
 
 프로젝트 소개: 자동차 정보를 얻기 위해 이곳저곳 찾아다닐 필요 없이, 여러 사이트의 핵심 정보를 한 페이지에서 바로 확인할 수 있도록 제작했습니다. 
 
+
+
 기획 배경: "자동차에 대해 궁금한 건 많은데, 매번 여러 사이트를 뒤져보기 귀찮지 않을까?"라는 고민에서 시작했습니다. 여러 사이트 봐야하는 과정을 단축해서 한사이트에서 여러사이트 정보를 볼수있는 사이트를 기획하게 되었습니다.
 
+
+
+
+
+
+<br>
 🎯 주요 목표 및 필요성
+
+
 프로젝트 목표: 사용자 입장에서 더 빠르고 편한 정보찾기 
 
+
+
+
+
+<br>
 🛠️ 기술 스택
+
+
 FRONTEND: Streamlit
+
+
 BACKEND: Python 3.12
+
+
 DATABASE: MySQL
+
+
 DATA PROCESSING: Pandas, NumPy
+
+
 DATA VISUALIZATION: Plotly, Matplotlib
+
+
 WEB SCRAPING: BeautifulSoup, Selenium
 
+
+
+
+
+<br>
 🏁 실행하기 
+
+
 의존 페키지 설치
+
+
 ```python
 pip install -r requirements.txt
 ```
 
+
+
+
+<br>
 🔢  ERD & DB
+
+
 <img width="1820" height="772" alt="ERD" src="https://github.com/user-attachments/assets/11dcc2c9-c864-44b8-9e20-01fb0507dc92" />
 
+
+
 SQL Database Script
+
+
 ```sql
 
 create database vehicledb;
@@ -101,6 +177,8 @@ CREATE TABLE `new_registered_vehicle` (
 )ENGINE=INNODB COMMENT '신규등록';
 ```
 
+
+
 테이블 삭제
 ```sql
 DROP TABLE IF EXISTS total_registered_vehicle CASCADE;
@@ -111,8 +189,23 @@ DROP TABLE IF EXISTS new_registered_vehicle CASCADE;
 DROP TABLE IF EXISTS vehicle_company CASCADE;
 ```
 
-📊 수행결과
 
+
+
+
+<br>
+📊 수행결과
+FAQ 페이지 
+<img width="1512" height="908" alt="faq3" src="https://github.com/user-attachments/assets/f18cb326-9759-42b6-947c-71787e230cdc" />
+<img width="1509" height="903" alt="faq2" src="https://github.com/user-attachments/assets/b5dc994b-5b8d-45ed-b728-092070900460" />
+<img width="1511" height="908" alt="faq1" src="https://github.com/user-attachments/assets/4c04e594-b283-4d18-912a-cdcd6de7f2bd" />
+
+
+
+
+
+<br>
 📓한 줄 회고 
+
 
 다음 계선: vehicle_company 데이터 입력 자동화기, 더 다양한 FAQ 데이터 포함학기
