@@ -6,20 +6,9 @@ from selenium.webdriver.common.by import By
 import time
 import pandas as pd
 
-
-# 현대자동차그룹:
 # 현대자동차: 대중적인 승용차 및 SUV 라인업.
-# 기아: 현대차와 함께 시장을 주도하는 인기 브랜드.
-# 제네시스: 현대차그룹의 고급 럭셔리 자동차 브랜드.
-# 르노코리아자동차: 르노 그룹 산하로 국내에서 차량을 생산 및 판매.
-# KG모빌리티 (KGM): 쌍용자동차를 인수하여 KG그룹에 속하며, SUV 중심의 라인업.
-# 한국GM: 쉐보레 브랜드를 통해 차량을 판매하는 GM의 국내 법인.
-# 상용차 및 특수차:
-# 타타대우모빌리티: 트럭 등 상용차 전문.
-# 우진산전: 전철, 전기버스 등 친환경 운송기기.
-# 대창모터스: 초소형 전기차 등. 
-vehicle_FAQ_group = '현대자동차 FAQ'
 
+vehicle_FAQ_group = '현대자동차 FAQ'
 
 path = 'chromedriver.exe'
 service = webdriver.chrome.service.Service(path)
@@ -28,10 +17,7 @@ driver = webdriver.Chrome(service=service)
 
 url = 'https://www.hyundai.com/kr/ko/e/customer/center/faq'
 driver.get(url)
-
-
-
-#전체페이지 FAQ 테이블
+time.sleep(5)
 
 faq_PK = []
 company = []
@@ -39,8 +25,12 @@ category = []
 question = []
 answer = []
 
+#------------------------------ FAQ 카테고리 갯수 확인--------------------------------------#
 num_categorys = len(driver.find_elements(By.XPATH,'//*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[1]/div[1]/ul/li'))
 print(num_categorys)
+#-----------------------------------------------------------------------------------------#
+
+#---------------------- FAQ text 추출 (회사, 질문, 답변, 카테고리, 인덱스-----------------#
 faq_number = 0
 
 for category_idx in range(1,num_categorys+1):
@@ -48,8 +38,7 @@ for category_idx in range(1,num_categorys+1):
     driver.execute_script("arguments[0].click();", category_btn)
     time.sleep(4)
     print(category_idx)
-    # //*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[1]/div[1]/ul/li[1]
-    # //*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[1]/div[1]/ul
+
     page = 1
 
     while True:
@@ -88,11 +77,7 @@ for category_idx in range(1,num_categorys+1):
             xpaths = [
                 f'//*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[3]/div[1]/div[{idx}]/div/div',
                 f'//*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[3]/div[1]/div[{idx}]/div/div/div',
-                f'//*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[3]/div[1]/div[1]/div/div'
-                
-                
-
-            ]
+                f'//*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[3]/div[1]/div[1]/div/div']
 
             answer_text = ''  # 기본값
             for xp in xpaths:
@@ -126,8 +111,9 @@ for category_idx in range(1,num_categorys+1):
         except:
             print("✅ 마지막 페이지")
             break
+#----------------------------------------------------------------------#
 
-
+#-----------------------크롤링 추출 결과 저장------------------------------#
 
 data = {'faq_PK': faq_PK,   
         'company': company,   
@@ -139,4 +125,5 @@ df = pd.DataFrame(data)
 
 # FAQ 현대 저장  
 df.to_csv('hd_faq.csv', index=False, encoding='utf-8') 
-    
+#----------------------------------------------------------------------#
+   
