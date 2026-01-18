@@ -17,15 +17,17 @@ if connection.is_connected():
     print('MySQL 서버 연결 성공!')
 
 d = pd.read_csv(file_path)
-unique_cpy = d['제조사'].unique()
-sql_cpy = 'INSERT INTO vehicle_company(company_name) VALUES (%s)'# 
-for brd_name in unique_cpy:
-    try:
-         cursor.execute(sql_cpy, (brd_name,))
-         print(f'등록 완료: {brd_name}')
-    except mysql.connector.Error as err:
-         print(f'제조사 건너뛰기: {brd_name} | 이유: {err}')
-sql_cpy = 'INSERT INTO vehicle_sales(sales_date, company_id, sales_count, sales_model) VALUES (%s, %s, %s, %s)'
+
+# 별도 SQL 구문으로 처리하고자 주석 처리
+# unique_cpy = d['제조사'].unique()
+# sql_cpy = 'INSERT INTO vehicle_company(company_name) VALUES (%s)'# 
+# for brd_name in unique_cpy:
+#     try:
+#          cursor.execute(sql_cpy, (brd_name,))
+#          print(f'등록 완료: {brd_name}')
+#     except mysql.connector.Error as err:
+#          print(f'제조사 건너뛰기: {brd_name} | 이유: {err}')
+# sql_cpy = 'INSERT INTO vehicle_sales(sales_date, company_id, sales_count, sales_model) VALUES (%s, %s, %s, %s)'
 
 cursor.execute("SELECT company_id, company_name FROM vehicle_company")
 cpy_map = {cpy_name: cpy_id for (cpy_id, cpy_name) in cursor.fetchall()}
