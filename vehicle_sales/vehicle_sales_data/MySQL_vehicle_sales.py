@@ -9,7 +9,7 @@ connection = mysql.connector.connect(
     host = 'localhost',
     user = 'ohgiraffers',
     password = 'ohgiraffers',
-    database = 'vehicle_sales_db'
+    database = 'vehicledb'
 )
 cursor = connection.cursor()
 
@@ -18,7 +18,7 @@ if connection.is_connected():
 
 d = pd.read_csv(file_path)
 unique_cpy = d['제조사'].unique()
-sql_cpy = 'INSERT INTO vehicle_company(`company name`) VALUES (%s)'# 
+sql_cpy = 'INSERT INTO vehicle_company(company_name) VALUES (%s)'# 
 for brd_name in unique_cpy:
     try:
          cursor.execute(sql_cpy, (brd_name,))
@@ -27,7 +27,7 @@ for brd_name in unique_cpy:
          print(f'제조사 건너뛰기: {brd_name} | 이유: {err}')
 sql_cpy = 'INSERT INTO vehicle_sales(sales_date, company_id, sales_count, sales_model) VALUES (%s, %s, %s, %s)'
 
-cursor.execute("SELECT company_id, `company name` FROM vehicle_company")
+cursor.execute("SELECT company_id, company_name FROM vehicle_company")
 cpy_map = {cpy_name: cpy_id for (cpy_id, cpy_name) in cursor.fetchall()}
 
 sql_sales = 'INSERT INTO vehicle_sales(sales_date, company_id, sales_count, sales_model) VALUES (%s, %s, %s, %s)'
