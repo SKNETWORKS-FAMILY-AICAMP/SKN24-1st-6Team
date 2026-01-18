@@ -19,7 +19,8 @@ pg.run()
 
 
 
-# 필터링 
+# Filter
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -31,25 +32,27 @@ with col1:
 
 with col2:
     genre = st.radio(
-        "사용연료",
-        ["경유", "수소"],
+        "What's your favorite movie genre",
+        [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
         index=None,
     )
     st.write("You selected:", genre)
 
 with col3:
-    gender_options = {
-    0: "여자",
-    1: "남자"
+    option_map = {
+    0: ":material/add:",
+    1: ":material/zoom_in:",
+    2: ":material/zoom_out:",
+    3: ":material/zoom_out_map:",
     }
     selection = st.pills(
-        "성별",
-        options=gender_options.keys(),
-        format_func=lambda option: gender_options[option],
+        "Tool",
+        options=option_map.keys(),
+        format_func=lambda option: option_map[option],
         selection_mode="single",
     )
     st.write(
-        "성별 선택: "
-        f"{None if selection is None else gender_options[selection]}"
+        "Your selected option: "
+        f"{None if selection is None else option_map[selection]}"
     )
 
