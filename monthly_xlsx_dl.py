@@ -16,7 +16,7 @@ if not os.path.exists(data_dir): # 폴더가 없으면 새로 만들기
     os.makedirs(data_dir)
 
 file_name = '2025 월별 등록 현황'
-file_path = os.path.join(data_dir, f"{file_name}.xlsx") # 파일 경로 만들기 
+file_path = os.path.join(data_dir, f"{file_name}.csv") # 파일 경로 만들기 
 print(f"파일이 저장될 최종 위치: {file_path}")
 
 # 크롬 설정하기
@@ -30,8 +30,7 @@ prefs = {
 chrome_options = Options()
 chrome_options.add_experimental_option("prefs", prefs)
 
-path = "chromedriver.exe"
-service = webdriver.chrome.service.Service(path)  
+service = ChromeService(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 ### 1. 사이트 접근 
@@ -46,7 +45,10 @@ time.sleep(2)
 
 start_options = driver.find_elements(By.XPATH, "//*[@id='sStart']/option")
 
-target_start_month = "202501" # 날짜 변경가능하게
+year = input("연도를 입력하세요")
+target_start_month =year + "01" # 날짜 변경가능하게
+target_end_month = year + "12"
+
 for option in start_options:
     if option.text == target_start_month:
         option.click()
@@ -55,15 +57,16 @@ for option in start_options:
 
 ### 2. 날짜 끝 선택 버튼
 end_btn = driver.find_element(By.XPATH, "//*[@id='sEnd']")
-start_btn.click()
+end_btn.click()
 time.sleep(1)
 
 end_options = driver.find_elements(By.XPATH, "//*[@id='sEnd']/option")
 
-target_end_month="202512"
+
 for option in end_options:
     if option.text == target_end_month:
         option.click()
+        break
 
 ### 3. 조회하기
 search_btn = driver.find_element(By.CSS_SELECTOR, ".mu-btn.mu-btn-secondary")
@@ -72,7 +75,7 @@ if search_btn.text == "조회":
 time.sleep(3)
 
 ### 4. 엑셀 파일 다운로드
-wait = WebDriverWait(driver, 30) 
+wait = WebDriverWait(driver, 30)
 file_dl_btn=wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="fileDownBtn"]'))) # 엑셀 다운로드 버튼이 클릭 가능할 때까지 대기
 file_dl_btn.click()
 time.sleep(1)
