@@ -64,8 +64,8 @@ for category_idx in range(1,num_categorys+1):
             faq_PK.append(faq_number)
             
             # comapany : 현대
-            print('브랜드 명 : Hyndai','\n')
-            company.append(f'Hyndai')
+            print('브랜드 명 : 현대','\n')
+            company.append(f'현대')
 
             # category : 카테고리명
             category_title = driver.find_element(By.XPATH, f'//*[@id="app"]/div[3]/section/div[2]/div/div[2]/section/div/div[3]/div[1]/div[{idx}]/button/div/span[1]')

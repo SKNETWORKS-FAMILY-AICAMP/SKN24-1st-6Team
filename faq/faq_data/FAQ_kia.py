@@ -103,8 +103,8 @@ for category_idx in range(3,num_categorys+1):
             faq_PK.append(faq_number)
             
             # comapany : 기아
-            print('브랜드 명 : Kia','\n')
-            company.append(f'Kia')
+            print('브랜드 명 : 기아','\n')
+            company.append(f'기아')
 
             print(f'질문 : {question_text}\n')
             question.append(question_text)
