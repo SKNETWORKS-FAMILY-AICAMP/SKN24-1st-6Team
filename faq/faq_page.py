@@ -2,10 +2,10 @@ import streamlit as st
 import mysql.connector
 
 connection = mysql.connector.connect(
-    host="localhost", 
-    user="root", 
-    password="billy", 
-    database="vehicledb" 
+    host = 'localhost',
+    user = 'ohgiraffers',
+    password = 'ohgiraffers',
+    database = 'vehicledb'
 )
 
 st.title("FAQ ⁉️ ")
@@ -32,6 +32,7 @@ selection = st.pills(
     options=company_list.keys(),
     format_func=lambda option: company_list[option],
     selection_mode="single",
+    default=0
 )
 if selection is not None:
     company_id = company_id_map[selection]
