@@ -15,10 +15,6 @@ data_dir = os.path.join(base_dir, "월별 등록 현황") # 현재 폴더/"새�
 if not os.path.exists(data_dir): # 폴더가 없으면 새로 만들기
     os.makedirs(data_dir)
 
-file_name = '2025 월별 등록 현황'
-file_path = os.path.join(data_dir, f"{file_name}.csv") # 파일 경로 만들기 
-print(f"파일이 저장될 최종 위치: {file_path}")
-
 # 크롬 설정하기
 prefs = {
     "download.default_directory": data_dir, # data_dir 경로
@@ -38,17 +34,17 @@ url = "https://stat.molit.go.kr/portal/cate/statView.do?hRsId=58&hFormId=5498&hD
 driver.get(url)
 time.sleep(5)
 
+year = str(2025) # 연도 추가 수집 가능
+target_start_month =year + "01" # 날짜 변경가능하게
+target_end_month = year + "12"
+
+
 ### 2. 날짜 시작 선택 버튼
 start_btn = driver.find_element(By.XPATH, "//*[@id='sStart']")
 start_btn.click()
 time.sleep(2)
 
 start_options = driver.find_elements(By.XPATH, "//*[@id='sStart']/option")
-
-year = input("연도를 입력하세요")
-target_start_month =year + "01" # 날짜 변경가능하게
-target_end_month = year + "12"
-
 for option in start_options:
     if option.text == target_start_month:
         option.click()
