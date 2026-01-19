@@ -32,6 +32,7 @@ selection = st.pills(
     options=company_list.keys(),
     format_func=lambda option: company_list[option],
     selection_mode="single",
+    default=0
 )
 if selection is not None:
     company_id = company_id_map[selection]
