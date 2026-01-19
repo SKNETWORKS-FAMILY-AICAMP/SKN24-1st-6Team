@@ -28,6 +28,7 @@
 - 통계 페이지를 검색해서 들어가야 하는 불편함, 분산된 자동차 정보를 한번에 확인하기 위해 이곳저곳 찾아다닐 필요 없이, **여러 사이트의 핵심 정보를 한 페이지에서** 바로 확인할 수 있도록 제작. 
 ---
 ### 2-1. 🔍 배경
+
 **<전체 등록 및 신규 등록 차량 정의>**
 1) 전체 등록 정의: 해당 시점에 자동차 등록 원부에 등록되어 있는 **자동차의 총 수**
 - 누적되는 데이터이므로 차량 보유규모, 지역별 자동차 보급 수준, 장기적인 증가나 감소의 추세를 보는데 용이함
@@ -66,11 +67,10 @@
 3. **국내 상위 제조사의 FAQ 통합 정보 제공**
 	- 판매량이 높은 대표적인 브랜드(현대, 기아)의 FAQ를 한번에 확인할 수 있도록 함
 
-
-
-<br>
+---
 
 ## 3. 🛠️ 기술 스택
+
 - FRONTEND
 <img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=python&logoColor=white"> 
 
@@ -94,26 +94,24 @@
 
 ---
 ## 4. WBS
+<img width="915" height="667" alt="WBS" src="https://github.com/user-attachments/assets/9bb0a82a-54f0-4bd6-a0db-dafce8c4d908" />
 
 ---
-
 ## 5. 요구사항 명세서
+<img width="1054" height="436" alt="요구사항명세서" src="https://github.com/user-attachments/assets/bb193860-b2db-4c68-8ab2-324d3a637b9a" />
 
 ---
-
 ## 6. ERD
+
 <img width="1820" height="772" alt="ERD" src="https://github.com/user-attachments/assets/11dcc2c9-c864-44b8-9e20-01fb0507dc92" />
 
 ---
-
 ## 7. 수행 결과
 ### 의존 패키지 설치
 
 ```python
 pip install -r requirements.txt
 ```
-
-<br>
 
 ### 🔢 SQL Database Script
 
@@ -192,17 +190,30 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 ```
 
 ### 메인
+---
 
 ### 자동차 등록 현황
+---
+<img width="925" height="822" alt="total_reg_page_1" src="https://github.com/user-attachments/assets/01de72b7-5987-4470-b05b-3849052afa96" />
+![total_reg_page](https://github.com/user-attachments/assets/dcdc5ab8-1400-4892-8846-106335561081)
 
 ### 자동차 신규 등록 현황
+---
+<img width="1157" height="1011" alt="new_register_page__1" src="https://github.com/user-attachments/assets/79345bbb-23cd-4fac-9d07-56d282425773" />
+<img width="1158" height="1012" alt="new_register_page__2" src="https://github.com/user-attachments/assets/9bc94799-ab28-4dd2-908a-56e02567109f" />
+<img width="1158" height="1010" alt="new_register_page__3" src="https://github.com/user-attachments/assets/e355f683-86db-44f2-8b5f-3d6aa1cebc2e" />
 
 ### 자동차 판매량 조회
+---
+<img width="648" height="806" alt="vehicle_sales_page__1" src="https://github.com/user-attachments/assets/5a2fcd5f-7855-445c-9850-927d0996ef5e" />
+<img width="626" height="785" alt="vehicle_sales_page__2" src="https://github.com/user-attachments/assets/0e8b430f-7bf3-4c51-b795-75d5beab7bf5" />
 
 ### FAQ
+---
 <img width="1512" height="908" alt="faq3" src="https://github.com/user-attachments/assets/f18cb326-9759-42b6-947c-71787e230cdc" />
 <img width="1509" height="903" alt="faq2" src="https://github.com/user-attachments/assets/b5dc994b-5b8d-45ed-b728-092070900460" />
 <img width="1511" height="908" alt="faq1" src="https://github.com/user-attachments/assets/4c04e594-b283-4d18-912a-cdcd6de7f2bd" />
+
 ---
 
 <br>
