@@ -199,7 +199,8 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 	3) (total_registered_page.py) 수정 ; (MySQL 연동, 사용자 정보 입력 필요)
 
 4. [new_registered_vehicle] >
-	1) (new_registered_vehicle_data.py) 실행    → [db_new_registered_vehicle] 내 new_registered_vehicle 테이블 생성
+	1) (new_registered_vehicle_data.py) 실행
+		→ [db_new_registered_vehicle] 내 new_registered_vehicle 테이블 생성
 	2) Export > (new_registered_vehicle_data.sql) 저장
 
 5. Streamlit Run
