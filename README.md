@@ -94,7 +94,7 @@
 <img width="1820" height="772" alt="ERD" src="https://github.com/user-attachments/assets/11dcc2c9-c864-44b8-9e20-01fb0507dc92" />
 
 ---
-## 7. 수행 결과
+## 7. 프로젝트 실행
 ### 의존 패키지 설치
 
 ```python
@@ -177,21 +177,46 @@ DROP TABLE IF EXISTS new_registered_vehicle CASCADE;
 DROP TABLE IF EXISTS vehicle_company CASCADE;
 ```
 
+### 실행 순서 🏃🏃‍♂️🏃‍♀️ 
+```
+- 세팅: 폴더 확인 
+[vehicle_sales], [total_registered_vehicle], [new_registered_vehicle], [faq] 
+- 아래 순서대로 진행
+
+1. [vehicle_sales] >
+	1) (vehicle_sales_data_crawling.py) 실행
+	2) (final_vehicle_sales_data.py) 실행
+	3) (MySQL_vehicle_sales.py) 실행
+
+2. [faq] >
+	1) (final_vehicle_sales_data.py) 실행
+	2) (FAQ_kia.py) 실행
+	3) (FAQ_SQL_SAVE.py) 실행
+
+3. [total_registered_vehicle] >
+	1) (monthly_xlsx_dl.py) 실행
+	2) (xlsx_to_mysql.py) 실행 ; (사용자 MySQL 정보 입력 필요)
+	3) (total_registered_page.py) 수정 ; (MySQL 연동, 사용자 정보 입력 필요)
+
+4. [new_registered_vehicle] >
+	1) (new_registered_vehicle_data.py) 실행    → [db_new_registered_vehicle] 내 new_registered_vehicle 테이블 생성
+	2) Export > (new_registered_vehicle_data.sql) 저장
+
+5. Streamlit Run
+	1) 메인 (home.py) 실행
+```
+---
+## 8. 산출물
 ### 메인
 ---
 
 ### 자동차 등록 현황
 ---
-<img width="925" height="822" alt="total_reg_page_1" src="https://github.com/user-attachments/assets/01de72b7-5987-4470-b05b-3849052afa96" />
-
 ![total_reg_page](https://github.com/user-attachments/assets/dcdc5ab8-1400-4892-8846-106335561081)
 
 ### 자동차 신규 등록 현황
 ---
-<img width="60%" height="60%" alt="new_register_page__1" src="https://github.com/user-attachments/assets/f725e647-2c04-40e6-b595-3ba77c9940ad" />
-<img width="60%" height="60%" alt="new_register_page__2" src="https://github.com/user-attachments/assets/153255be-33f7-4dd3-8ec9-730fef8ac561" />
-<img width="60%" height="60%" alt="new_register_page__3" src="https://github.com/user-attachments/assets/d52ab7c5-c85c-429d-947b-23a195dee92d" />
-
+![Animation_new](https://github.com/user-attachments/assets/d8c9c15c-9b9a-44a7-b246-9019ee06e3ae)
 
 ### 자동차 판매량 조회
 ---
@@ -202,13 +227,11 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 ---
 https://github.com/user-attachments/assets/130e2634-0fe8-4be8-8259-fac140a7acc9
 
-
-
 ---
 
 <br>
 
-## 📓한줄 회고 
+## 9. 📓한줄 회고 
 **김유진**
 > 금번 프로젝트를 통해 팀원들의 도움 덕분에 짧은 기간이지만 구현에 성공할 수 있었습니다. 
 > 자동차 등록 현황 데이터 수집을 위해 BeautifulSoup과 Selenium으로 웹 크롤링을 직접 시도하며, python 코드를 더 이해하는 시간이 되었습니다. 기획부터 산출까지 짧은 기간 안에 구성할 수 있었던 경험을 통해 이후 프로젝트에서도 어떻게 세팅 하고 시작해야 할지 체득할 수 있는 계기였습니다.
