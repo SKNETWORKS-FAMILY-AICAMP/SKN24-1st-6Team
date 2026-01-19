@@ -178,6 +178,9 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 ```
 
 ### 실행 순서 🏃🏃‍♂️🏃‍♀️ 
+폴더 구조
+<img width="521" height="689" alt="project_structure" src="https://github.com/user-attachments/assets/ae90efce-6c38-4fcc-94f7-3878fe6fae22" />
+
 ```
 - 세팅: 폴더 확인 
 [vehicle_sales], [total_registered_vehicle], [new_registered_vehicle], [faq] 
@@ -204,7 +207,7 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 	2) Export > (new_registered_vehicle_data.sql) 저장
 
 5. Streamlit Run
-	1) 메인 (home.py) 실행
+	1) 메인 홈페이지(home.py) 실행
 ```
 ---
 ## 8. 산출물
