@@ -9,10 +9,10 @@ from urllib.parse import quote
 import mysql.connector
 
 connection = mysql.connector.connect(
-    host = 'localhost',                # MySQL 서버 주소 (ip)
-    user = 'root',              # 사용자 이름
-    password = 'admin1234',          # 비밀번호
-    database = 'db_new_registered_vehicle'  # 사용할 DB 스키마
+    host = 'localhost',
+    user = 'ohgiraffers',
+    password = 'ohgiraffers',
+    database = 'vehicledb'
 )
 
 cursor = connection.cursor()                # 커서 호출
