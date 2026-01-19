@@ -1,7 +1,7 @@
 import mysql.connector
 import pandas as pd
 import streamlit as st
-# import altair as alt
+import altair as alt
 
 connection = mysql.connector.connect(
     host = 'localhost',                     # MySQL 서버 주소 (ip)
@@ -114,13 +114,13 @@ if st.button('조회하기', width = 1000):
         '신규등록 수 (대)' : new_reg_count_list
     })
 
-    # chart = alt.Chart(data).mark_line().encode(
-    #     x = alt.X('연월', title = '연월', axis = alt.Axis(labelAngle=0)),
-    #     y = alt.Y('신규등록 수 (대)', title = '신규등록 수 (대)')
-    # )
+    chart = alt.Chart(data).mark_line().encode(
+        x = alt.X('연월', title = '연월', axis = alt.Axis(labelAngle=0)),
+        y = alt.Y('신규등록 수 (대)', title = '신규등록 수 (대)')
+    )
 
-    # st.altair_chart(chart)
-    st.line_chart(data.set_index('연월')['신규등록 수 (대)'], x_label='연월', y_label='신규등록 수 (대)')
+    st.altair_chart(chart)
+    # st.line_chart(data.set_index('연월')['신규등록 수 (대)'], x_label='연월', y_label='신규등록 수 (대)')
     # 라인 차트를 그림
 
 cursor.close()
