@@ -111,7 +111,7 @@ popular_vehicle_page = st.Page(
 )
 new_registered_vehicle_page = st.Page(
     "new_registered_vehicle/new_registered_page.py", 
-    title="👥 최신 자동차 신규등록 트렌드 조회", 
+    title="👥 자동차 신규등록 트렌드 조회", 
 )
 faq_page = st.Page(
     "faq/faq_page.py", 
