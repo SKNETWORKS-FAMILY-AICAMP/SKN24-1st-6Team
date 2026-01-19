@@ -200,9 +200,9 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### FAQ
 ---
-<img width="1512" height="908" alt="faq3" src="https://github.com/user-attachments/assets/f18cb326-9759-42b6-947c-71787e230cdc" />
-<img width="1509" height="903" alt="faq2" src="https://github.com/user-attachments/assets/b5dc994b-5b8d-45ed-b728-092070900460" />
-<img width="1511" height="908" alt="faq1" src="https://github.com/user-attachments/assets/4c04e594-b283-4d18-912a-cdcd6de7f2bd" />
+https://github.com/user-attachments/assets/130e2634-0fe8-4be8-8259-fac140a7acc9
+
+
 
 ---
 
@@ -210,7 +210,9 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ## 📓한줄 회고 
 **김유진**
->
+> 금번 프로젝트를 통해 팀원들의 도움 덕분에 짧은 기간이지만 구현에 성공할 수 있었습니다. 
+> 자동차 등록 현황 데이터 수집을 위해 BeautifulSoup과 Selenium으로 웹 크롤링을 직접 시도하며, python 코드를 더 이해하는 시간이 되었습니다. 기획부터 산출까지 짧은 기간 안에 구성할 수 있었던 경험을 통해 이후 프로젝트에서도 어떻게 세팅 하고 시작해야 할지 체득할 수 있는 계기였습니다.
+> MySQL의 DB를 가져와 Streamlit에 구현하는 것과 데이터를 어떻게 효과적으로 보여줄 것인가에 대한 고민이 부족했던 것 같습니다. 이후에는 실제 개발 단계 이전부터 기획과 모의 구현에 충실하게 임하여 데이터 표현에도 조금 더 신경 쓰고 싶습니다.
 
 **김정현**
 >
@@ -219,8 +221,8 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 >
 
 **권민제**
->
+>웹 크롤링 능력은 확실히 향상되었지만, Streamlit과 GitHub 사용에는 여전히 미숙함을 느꼈고 팀 프로젝트에서 의사소통 면에서도 소극적인 태도를 완전히 극복하지 못한 점이 아쉬웠다. 앞으로는 GitHub 사용법을 정리해 개인 레포지토리를 만들어 직접 실습해보고, 팀 활동에서는 작은 의견이라도 먼저 제시하며 보다 적극적으로 참여해보고자 한다.
 
 **박정은**
 >
-다음 개선: vehicle_company 데이터 입력 자동화기, 더 다양한 FAQ 데이터 포함학기
+
