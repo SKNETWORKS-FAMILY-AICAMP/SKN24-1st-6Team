@@ -213,7 +213,8 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### 자동차 등록 현황
 ---
-![total_reg_page](https://github.com/user-attachments/assets/dcdc5ab8-1400-4892-8846-106335561081)
+https://github.com/user-attachments/assets/f7ddb545-0050-4f74-bce9-6ccb1565ded0
+
 
 ### 자동차 신규 등록 현황
 ---
@@ -221,8 +222,7 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### 자동차 판매량 조회
 ---
-<img width="50%" height="50%" alt="vehicle_sales_page__1" src="https://github.com/user-attachments/assets/5a2fcd5f-7855-445c-9850-927d0996ef5e" />
-<img width="50%" height="50%" alt="vehicle_sales_page__2" src="https://github.com/user-attachments/assets/0e8b430f-7bf3-4c51-b795-75d5beab7bf5" />
+![판매량 조회](https://github.com/user-attachments/assets/c24a7c54-b9ee-4080-97ab-36e160d5838d)
 
 ### FAQ
 ---
