@@ -101,7 +101,7 @@
 pip install -r requirements.txt
 ```
 
-### 🔢 SQL Database Script
+### SQL Database Script
 
 ```sql
 
