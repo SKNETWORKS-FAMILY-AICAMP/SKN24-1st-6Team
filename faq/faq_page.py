@@ -2,10 +2,10 @@ import streamlit as st
 import mysql.connector
 
 connection = mysql.connector.connect(
-    host="localhost", 
-    user="root", 
-    password="billy", 
-    database="vehicledb" 
+    host = 'localhost',
+    user = 'ohgiraffers',
+    password = 'ohgiraffers',
+    database = 'vehicledb'
 )
 
 st.title("FAQ ⁉️ ")
