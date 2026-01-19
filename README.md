@@ -213,7 +213,7 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### 자동차 등록 현황
 ---
-https://github.com/user-attachments/assets/736bfcad-71fa-4e73-a81b-b3aba6f90dd5
+![Animation_total](https://github.com/user-attachments/assets/efd61d26-08f5-4648-9f8e-72e4559df2d3)
 
 ### 자동차 신규 등록 현황
 ---
