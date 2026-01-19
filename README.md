@@ -77,8 +77,8 @@
 | BACKEND | <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> |
 | DATABASE | <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> |
 | DATA PROCESSING | <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=mysql&logoColor=white"> |
-| DATA VISUALIZATION | <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> |
-| WEB SCRAPING | <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/selenium-43B02A?style=for-the-badge&logo=mysql&logoColor=white"> |
+| DATA VISUALIZATION | <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) |
+| WEB SCRAPING | ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-61DAFB?style=for-the-badge&logo=python&logoColor=white) <img src="https://img.shields.io/badge/selenium-43B02A?style=for-the-badge&logo=mysql&logoColor=white"> |
 
 ---
 ## 4. WBS
@@ -188,15 +188,15 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### 자동차 신규 등록 현황
 ---
-<img width="967" height="826" alt="new_register_page__1" src="https://github.com/user-attachments/assets/f725e647-2c04-40e6-b595-3ba77c9940ad" />
-<img width="1000" height="769" alt="new_register_page__2" src="https://github.com/user-attachments/assets/153255be-33f7-4dd3-8ec9-730fef8ac561" />
-<img width="983" height="830" alt="new_register_page__3" src="https://github.com/user-attachments/assets/d52ab7c5-c85c-429d-947b-23a195dee92d" />
+<img width="60%" height="60%" alt="new_register_page__1" src="https://github.com/user-attachments/assets/f725e647-2c04-40e6-b595-3ba77c9940ad" />
+<img width="60%" height="60%" alt="new_register_page__2" src="https://github.com/user-attachments/assets/153255be-33f7-4dd3-8ec9-730fef8ac561" />
+<img width="60%" height="60%" alt="new_register_page__3" src="https://github.com/user-attachments/assets/d52ab7c5-c85c-429d-947b-23a195dee92d" />
 
 
 ### 자동차 판매량 조회
 ---
-<img width="648" height="806" alt="vehicle_sales_page__1" src="https://github.com/user-attachments/assets/5a2fcd5f-7855-445c-9850-927d0996ef5e" />
-<img width="626" height="785" alt="vehicle_sales_page__2" src="https://github.com/user-attachments/assets/0e8b430f-7bf3-4c51-b795-75d5beab7bf5" />
+<img width="50%" height="50%" alt="vehicle_sales_page__1" src="https://github.com/user-attachments/assets/5a2fcd5f-7855-445c-9850-927d0996ef5e" />
+<img width="50%" height="50%" alt="vehicle_sales_page__2" src="https://github.com/user-attachments/assets/0e8b430f-7bf3-4c51-b795-75d5beab7bf5" />
 
 ### FAQ
 ---
