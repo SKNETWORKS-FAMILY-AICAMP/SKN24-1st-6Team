@@ -1,118 +1,121 @@
-🚘 CARPORT (카포트)
+# SKN24-1st-6Team
+## 🚘 CARPORT (카포트)
+*"자동차 구매 정보는 여기서: 현황·인기 차종·FAQ 통합 가이드"*
 
+---
+## 1. 👥 팀 소개
+### ✨ 구갱 (Gu-Gang) ✨
+- 90년대생 데이터로 이루어진 👉 Gang 😎🔥
+> 💪😆 90’s + Gang = 구갱 ✨🔫
 
-한번에 요즘 자동차 등록, 판매 수를 볼수있는 플랫폼
+<br>
 
+| **김유진** | **김정현** | **정재훈** | **권민제** | **박정은** |
+|---|---|---|---|---|
+| 🐣 | 🦊 | 🐯 | 🐼 | 🐱 |
+| [@shortcut-2](https://github.com/shortcut-2) | [@Jeich-16](https://github.com/Jeich-16) | [@JeaHoon-J](https://github.com/JeaHoon-J) | [@min3802](https://github.com/min3802) | [@brainkat](https://github.com/brainkat) |
 
+---
+
+## 2. 📋 프로젝트 개요
+
+> *자동차 등록 현황이 궁금한데, 한번에 볼 수 있는 곳 없을까?*
+
+<br>
+
+> *작년에 제일 많이 팔린 차는 뭘까?*
+
+- 통계 페이지를 검색해서 들어가야 하는 불편함, 분산된 자동차 정보를 한번에 확인하기 위해 이곳저곳 찾아다닐 필요 없이, **여러 사이트의 핵심 정보를 한 페이지에서** 바로 확인할 수 있도록 제작. 
+---
+### 2-1. 🔍 배경
+**<전체 등록 및 신규 등록 차량 정의>**
+1) 전체 등록 정의: 해당 시점에 자동차 등록 원부에 등록되어 있는 **자동차의 총 수**
+- 누적되는 데이터이므로 차량 보유규모, 지역별 자동차 보급 수준, 장기적인 증가나 감소의 추세를 보는데 용이함
+- 시･도별로 등록된 자동차의 제반사항을 파악하여 교통행정의 기초 자료로 활용하기 위함
+###### (참조 1. 국토교통부,자동차등록현황보고』통계정보보고서, [https://www.kostat.go.kr/board.es?mid=a10409070000&bid=12030&tag=&act=view&list_no=442885&ref_bid=])
+
+<br>
+
+2) 신규 등록 정의 : **새로 자동차를 구매**하여 자동차 등록 원부에 등록한 건 수
+- Business Research Insights(2023)에서는 분석 범위를 차량데이터 전체가 아닌 자동차 데이터 분석에 초점을 맞추어 시장의 규모를 측정(소비 심리나 경기 상황 반영)하고 향후 전망을 제시함 
+###### (참조 2. 보험연구원,「차량데이터 이용 현황 및 보험회사 시사점」, 보험연구원 홈페이지, [https://www.kiri.or.kr/report/reportList.do?docId=580489&catId=4])
+---
+### 2-2. ✔️ 한계점
+
+1) 전국 자동차 등록대수는 전반적인 자동차를 구매하는 동향을 볼 수 있지만, 그중 **어떤 차가 인기가 있는지 확인할 수 없음** 
+	→ 판매량을 통해 자동차 구매 예정 고객은 가장 인기가 많은 차종에 대한 정보를 확인할 수 있음
+
+<br>
+
+2) 예비 구매자들은 현재 인기 있는 모델을 확인하거나, 구매 전 FAQ를 확인하기 위해 제조사별 페이지를 **일일이 찾아서 비교**해야 하므로 편의성이 떨어짐
+	→ 해당 정보를 한 페이지에서 확인하는 편리성을 제공
+---
+### 2-3. 🚘 프로젝트 소개
+
+**CARPORT**는 2025년 최신 데이터를 바탕으로, 자동차 구매를 고민하거나 시장 동향이 궁금한 분들을 위해 **전국 자동차 등록 현황**과 **인기 모델 정보, FAQ**를 한눈에 보여주는 플랫폼입니다. 
+
+---
+### 2-4. 🎯 목표
+
+1. **2025 전국 자동차 등록 현황**
+	- 시/도/구별, 차종별로 국내에 자동차가 몇 대 등록되어 있는지 확인
+
+2. **2025 자동차 신규 등록 현황/판매량 조회**
+	- 신규 등록자들의 연령대/성별 현황을 확인    → 제조사별 2025년 판매량 확인을 통해 최신 트렌드를 파악하여 예비 구매자에게 정보 제공
+
+3. **국내 상위 제조사의 FAQ 통합 정보 제공**
+	- 판매량이 높은 대표적인 브랜드(현대, 기아)의 FAQ를 한번에 확인할 수 있도록 함
 
 
 
 <br>
-👥 팀 소개
 
-✨ 팀명: 구갱 (Gu-Gang) ✨
+## 3. 🛠️ 기술 스택
+- FRONTEND
+<img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=python&logoColor=white"> 
 
-📊 의미
-90년대생 데이터로 이루어진
-👉 Gang 😎🔥
+- BACKEND
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
 
+- DATABASE
+<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
 
-👥 팀원 소개
+- DATA PROCESSING
+<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=mysql&logoColor=white"> 
+<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=mysql&logoColor=white"> 
 
-🐣 김유진 — @shortcut-2
+- DATA VISUALIZATION Matplotlib
+<img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> 
+<img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> 
 
-🦊 김정현 — @Jeich-16
+- WEB SCRAPING BeautifulSoup
+<img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> 
+<img src="https://img.shields.io/badge/selenium-43B02A?style=for-the-badge&logo=mysql&logoColor=white"> 
 
-🐯 정재훈 — @JeaHoon-J
+---
+## 4. WBS
 
-🐼 권민제 — @min3802
+---
 
-🐱 박정은 — @brainkat
+## 5. 요구사항 명세서
 
-💪😆 90’s + Gang = 구갱 ✨🔫
+---
 
+## 6. ERD
+<img width="1820" height="772" alt="ERD" src="https://github.com/user-attachments/assets/11dcc2c9-c864-44b8-9e20-01fb0507dc92" />
 
+---
 
-
-
-<br>
-📋 프로젝트 개요
-
-
-CARPORT는 2025년 최신 데이터를 바탕으로, 자동차 구매를 고민하거나 시장 동향이 궁금한 분들을 위해 전국 자동차 등록 현황과 인기 모델 정보를 한눈에 보여주는 플랫폼입니다.
-
-
-
-프로젝트 소개: 자동차 정보를 얻기 위해 이곳저곳 찾아다닐 필요 없이, 여러 사이트의 핵심 정보를 한 페이지에서 바로 확인할 수 있도록 제작했습니다. 
-
-
-
-기획 배경: "자동차에 대해 궁금한 건 많은데, 매번 여러 사이트를 뒤져보기 귀찮지 않을까?"라는 고민에서 시작했습니다. 여러 사이트 봐야하는 과정을 단축해서 한사이트에서 여러사이트 정보를 볼수있는 사이트를 기획하게 되었습니다.
-
-
-
-
-
-
-<br>
-🎯 주요 목표 및 필요성
-
-
-프로젝트 목표: 사용자 입장에서 더 빠르고 편한 정보찾기 
-
-
-
-
-
-<br>
-🛠️ 기술 스택
-
-
-FRONTEND: Streamlit
-
-
-BACKEND: Python 3.12
-
-
-DATABASE: MySQL
-
-
-DATA PROCESSING: Pandas, NumPy
-
-
-DATA VISUALIZATION: Plotly, Matplotlib
-
-
-WEB SCRAPING: BeautifulSoup, Selenium
-
-
-
-
-
-<br>
-🏁 실행하기 
-
-
-의존 페키지 설치
-
+## 7. 수행 결과
+### 의존 패키지 설치
 
 ```python
 pip install -r requirements.txt
 ```
 
-
-
-
 <br>
-🔢  ERD & DB
 
-
-<img width="1820" height="772" alt="ERD" src="https://github.com/user-attachments/assets/11dcc2c9-c864-44b8-9e20-01fb0507dc92" />
-
-
-
-SQL Database Script
-
+### 🔢 SQL Database Script
 
 ```sql
 
@@ -177,9 +180,8 @@ CREATE TABLE `new_registered_vehicle` (
 )ENGINE=INNODB COMMENT '신규등록';
 ```
 
+#### 테이블 삭제
 
-
-테이블 삭제
 ```sql
 DROP TABLE IF EXISTS total_registered_vehicle CASCADE;
 DROP TABLE IF EXISTS faq CASCADE;
@@ -189,23 +191,35 @@ DROP TABLE IF EXISTS new_registered_vehicle CASCADE;
 DROP TABLE IF EXISTS vehicle_company CASCADE;
 ```
 
+### 메인
 
+### 자동차 등록 현황
 
+### 자동차 신규 등록 현황
 
+### 자동차 판매량 조회
 
-<br>
-📊 수행결과
-FAQ 페이지 
+### FAQ
 <img width="1512" height="908" alt="faq3" src="https://github.com/user-attachments/assets/f18cb326-9759-42b6-947c-71787e230cdc" />
 <img width="1509" height="903" alt="faq2" src="https://github.com/user-attachments/assets/b5dc994b-5b8d-45ed-b728-092070900460" />
 <img width="1511" height="908" alt="faq1" src="https://github.com/user-attachments/assets/4c04e594-b283-4d18-912a-cdcd6de7f2bd" />
-
-
-
-
+---
 
 <br>
-📓한 줄 회고 
 
+## 📓한줄 회고 
+**김유진**
+>
 
-다음 계선: vehicle_company 데이터 입력 자동화기, 더 다양한 FAQ 데이터 포함학기
+**김정현**
+>
+
+**정재훈**
+>
+
+**권민제**
+>
+
+**박정은**
+>
+다음 개선: vehicle_company 데이터 입력 자동화기, 더 다양한 FAQ 데이터 포함학기
