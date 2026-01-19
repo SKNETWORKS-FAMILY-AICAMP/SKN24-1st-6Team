@@ -179,9 +179,11 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### 실행 순서 🏃🏃‍♂️🏃‍♀️ 
 <br>
+폴더 구조
+<br>
 <img width="521" height="689" alt="project_structure" src="https://github.com/user-attachments/assets/ae90efce-6c38-4fcc-94f7-3878fe6fae22" />
 <br>
-폴더 구조
+
 
 ```
 - 세팅: 폴더 확인 
