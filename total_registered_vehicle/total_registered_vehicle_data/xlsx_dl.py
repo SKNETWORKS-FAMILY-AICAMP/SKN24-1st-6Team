@@ -34,7 +34,7 @@ url = "https://stat.molit.go.kr/portal/cate/statView.do?hRsId=58&hFormId=5498&hD
 driver.get(url)
 time.sleep(5)
 
-year = str(2025) # 연도 추가 수집 가능
+year = input("연도를 입력하세요") # 연도 추가 수집 가능
 target_start_month =year + "01" # 날짜 변경가능하게
 target_end_month = year + "12"
 
