@@ -9,8 +9,8 @@ st.title("자동차 등록현황 (월별 합계)")
 # DB 연결
 host = os.getenv("DB_HOST", "127.0.0.1")
 port = os.getenv("DB_PORT", "3306")
-user = os.getenv("DB_USER", "project1")
-pwd  = os.getenv("DB_PASS", "qwe123")
+user = os.getenv("DB_USER", "ohgiraffers")
+pwd  = os.getenv("DB_PASS", "ohgiraffers")
 db   = os.getenv("DB_NAME", "vehicledb")
 
 engine = create_engine(
@@ -48,35 +48,30 @@ reg_types = ["(전체)"] + pd.read_sql(
 # --------------------
 # UI
 # --------------------
-left, right = st.columns([2, 1])
 
-with right:
-    grain = st.selectbox("집계 단위", ["월", "년"])
-    city = st.selectbox("시도", cities)
 
-    if city == "(전체)":
-        districts = ["(전체)"]
-    else:
-        districts = ["(전체)"] + pd.read_sql(
-            f"""
-            SELECT DISTINCT district
-            FROM total_registered_vehicle
-            WHERE city = '{city}'
-            ORDER BY district
-            """,
-            engine
-        )["district"].tolist()
-
-    district = st.selectbox("시군구", districts)
-    vehicle_type = st.selectbox("차종", vehicle_types)
-    reg_type = st.selectbox("구분", reg_types)
-
-with left:
-    c1, c2 = st.columns(2)
-    with c1:
-        start = st.date_input("시작일", min_d, min_value=min_d, max_value=max_d)
-    with c2:
-        end = st.date_input("종료일", max_d, min_value=min_d, max_value=max_d)
+grain = st.selectbox("집계 단위", ["월", "년"])
+city = st.selectbox("시도", cities)
+if city == "(전체)":
+    districts = ["(전체)"]
+else:
+    districts = ["(전체)"] + pd.read_sql(
+        f"""
+        SELECT DISTINCT district
+        FROM total_registered_vehicle
+        WHERE city = '{city}'
+        ORDER BY district
+        """,
+        engine
+    )["district"].tolist()
+district = st.selectbox("시군구", districts)
+vehicle_type = st.selectbox("차종", vehicle_types)
+reg_type = st.selectbox("구분", reg_types)
+c1, c2 = st.columns(2)
+with c1:
+    start = st.date_input("시작일", min_d, min_value=min_d, max_value=max_d)
+with c2:
+    end = st.date_input("종료일", max_d, min_value=min_d, max_value=max_d)
 
 if start > end:
     st.error("시작일이 종료일보다 클 수 없습니다.")
