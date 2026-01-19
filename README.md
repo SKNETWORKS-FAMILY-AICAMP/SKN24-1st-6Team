@@ -12,7 +12,7 @@
 
 | **김유진** | **김정현** | **정재훈** | **권민제** | **박정은** |
 |---|---|---|---|---|
-| 🐣 | 🦊 | 🐯 | 🐼 | 🐱 |
+|   🐣   |   🦊   |   🐯   |   🐼   |   🐱   |
 | [@shortcut-2](https://github.com/shortcut-2) | [@Jeich-16](https://github.com/Jeich-16) | [@JeaHoon-J](https://github.com/JeaHoon-J) | [@min3802](https://github.com/min3802) | [@brainkat](https://github.com/brainkat) |
 
 ---
@@ -71,26 +71,14 @@
 
 ## 3. 🛠️ 기술 스택
 
-- FRONTEND
-<img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=python&logoColor=white"> 
-
-- BACKEND
-<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
-
-- DATABASE
-<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
-
-- DATA PROCESSING
-<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=mysql&logoColor=white"> 
-<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=mysql&logoColor=white"> 
-
-- DATA VISUALIZATION Matplotlib
-<img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> 
-<img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> 
-
-- WEB SCRAPING BeautifulSoup
-<img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> 
-<img src="https://img.shields.io/badge/selenium-43B02A?style=for-the-badge&logo=mysql&logoColor=white"> 
+|   영역   |   기술   |
+| ---------------------- | ---------- |
+| FRONTEND | <img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=python&logoColor=white"> |
+| BACKEND | <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> |
+| DATABASE | <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> |
+| DATA PROCESSING | <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=mysql&logoColor=white"> |
+| DATA VISUALIZATION | <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> |
+| WEB SCRAPING | <img src="https://img.shields.io/badge/plotly-7A76FF?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/selenium-43B02A?style=for-the-badge&logo=mysql&logoColor=white"> |
 
 ---
 ## 4. WBS
@@ -200,9 +188,10 @@ DROP TABLE IF EXISTS vehicle_company CASCADE;
 
 ### 자동차 신규 등록 현황
 ---
-<img width="1157" height="1011" alt="new_register_page__1" src="https://github.com/user-attachments/assets/79345bbb-23cd-4fac-9d07-56d282425773" />
-<img width="1158" height="1012" alt="new_register_page__2" src="https://github.com/user-attachments/assets/9bc94799-ab28-4dd2-908a-56e02567109f" />
-<img width="1158" height="1010" alt="new_register_page__3" src="https://github.com/user-attachments/assets/e355f683-86db-44f2-8b5f-3d6aa1cebc2e" />
+<img width="967" height="826" alt="new_register_page__1" src="https://github.com/user-attachments/assets/f725e647-2c04-40e6-b595-3ba77c9940ad" />
+<img width="1000" height="769" alt="new_register_page__2" src="https://github.com/user-attachments/assets/153255be-33f7-4dd3-8ec9-730fef8ac561" />
+<img width="983" height="830" alt="new_register_page__3" src="https://github.com/user-attachments/assets/d52ab7c5-c85c-429d-947b-23a195dee92d" />
+
 
 ### 자동차 판매량 조회
 ---
